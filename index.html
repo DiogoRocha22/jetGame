@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteor Evasing</title>
+    <link rel="stylesheet" href="src/style/style.css">
+</head>
+
+<body>
+    <h1>Meteor Evasing</h1>
+    <canvas id="gameCanvas" width="480" height="320"></canvas>
+    <p>Pontuação: <span id="score">0</span></p>
+
+    <img id="playerImage" src="src/assets/nave.png" style="display: none;">
+    <img id="obstacleImage" src="src/assets/obstaculo.png" style="display: none;">
+    <img id="backgroundImage" src="src/assets/bg-game.jpg" style="display: none;">
+
+    <div id="gameOverScreen">
+        <h2>Game Over</h2>
+        <p>Sua pontuação: <span id="finalScore">0</span></p>
+        <button onclick="restartGame()">Reiniciar Jogo</button>
+    </div>
+
+    <audio id="bgMusic" src="src/assets/gameSong.mp3" loop></audio>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
