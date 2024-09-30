@@ -108,9 +108,9 @@ function resetGameVariables() {
 function endGame() {
   gameRunning = false;
   bgMusic.pause();
-  resetGameVariables();
   bgMusic.currentTime = 0;
   finalScore.textContent = score;
+  resetGameVariables();
   gameOverScreen.style.display = "flex";
 }
 
@@ -139,12 +139,12 @@ createObstaclesPeriodically();
 
 function restartGame() {
   resetGameVariables();
-  gameRunning = true // Reseta as variáveis do jogo
+  gameRunning = true;
   document.getElementById("score").textContent = score;
   gameOverScreen.style.display = "none";
   bgMusic.play();
-  clearInterval(obstacleCreationInterval); // Limpa o intervalo anterior
-  createObstaclesPeriodically(); // Inicia novo intervalo
+  clearInterval(obstacleCreationInterval);
+  createObstaclesPeriodically(); 
   gameLoop();
 }
 
